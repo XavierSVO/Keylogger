@@ -1,0 +1,13 @@
+CREATE USER keylogger WITH
+    LOGIN
+    NOSUPERUSER
+    INHERIT
+    NOCREATEDB
+    NOCREATEROLE
+    NOREPLICATION;
+	
+ALTER USER keylogger WITH PASSWORD 'keylogger_admin';
+
+CREATE DATABASE keylogger WITH OWNER keylogger;
+
+GRANT ALL PRIVILEGES ON DATABASE keylogger TO keylogger;
