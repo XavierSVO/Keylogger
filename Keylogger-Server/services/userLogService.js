@@ -32,5 +32,5 @@ class UserLogService {
     return { id };
   }
 }
-
+//exportar el servicio para log del usuario
 module.exports = UserLogService;

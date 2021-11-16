@@ -8,3 +8,13 @@ E:\OneDrive\U\Octavo Semestre\SIN\Keylogger-Service\Keylogger\bin\Debug\Keylogge
 E:\OneDrive\U\Octavo Semestre\SIN\Keylogger-Service\Keylogger\bin\Debug\Keylogger.pdb
 E:\OneDrive\U\Octavo Semestre\SIN\Keylogger-Service\Keylogger\obj\Debug\Keylogger.exe
 E:\OneDrive\U\Octavo Semestre\SIN\Keylogger-Service\Keylogger\obj\Debug\Keylogger.pdb
+E:\OneDrive\U\Octavo Semestre\SIN\Keylogger\Keylogger-Service\Keylogger\bin\Debug\Keylogger.exe.config
+E:\OneDrive\U\Octavo Semestre\SIN\Keylogger\Keylogger-Service\Keylogger\bin\Debug\Keylogger.exe
+E:\OneDrive\U\Octavo Semestre\SIN\Keylogger\Keylogger-Service\Keylogger\bin\Debug\Keylogger.pdb
+E:\OneDrive\U\Octavo Semestre\SIN\Keylogger\Keylogger-Service\Keylogger\obj\Debug\Keylogger.csproj.AssemblyReference.cache
+E:\OneDrive\U\Octavo Semestre\SIN\Keylogger\Keylogger-Service\Keylogger\obj\Debug\Keylogger.csproj.SuggestedBindingRedirects.cache
+E:\OneDrive\U\Octavo Semestre\SIN\Keylogger\Keylogger-Service\Keylogger\obj\Debug\Keylogger.frmService.resources
+E:\OneDrive\U\Octavo Semestre\SIN\Keylogger\Keylogger-Service\Keylogger\obj\Debug\Keylogger.csproj.GenerateResource.cache
+E:\OneDrive\U\Octavo Semestre\SIN\Keylogger\Keylogger-Service\Keylogger\obj\Debug\Keylogger.csproj.CoreCompileInputs.cache
+E:\OneDrive\U\Octavo Semestre\SIN\Keylogger\Keylogger-Service\Keylogger\obj\Debug\Keylogger.exe
+E:\OneDrive\U\Octavo Semestre\SIN\Keylogger\Keylogger-Service\Keylogger\obj\Debug\Keylogger.pdb

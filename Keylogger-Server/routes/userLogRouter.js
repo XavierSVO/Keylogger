@@ -20,21 +20,5 @@ router.post('/',(req,res)=>{
     });
 })
 
-router.get('/:id', (req, res) => {
-    const { id } = req.params;
-    res.json({
-        id,
-        name: 'iPhone X3',
-        price: 32000,
-    });
-});
-
-router.get('/categories/:categoryId/products/:productId', (req, res) => {
-    const { categoryId, productId } = req.params;
-    res.json({
-        categoryId,
-        productId
-    });
-});
 
 module.exports=router;
