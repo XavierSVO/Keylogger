@@ -13,7 +13,7 @@ class UserLogService {
 
   async find() {
     const client = await getConnection();
-    const rta = await client.query('SELECT * FROM public.test');
+    const rta = await client.query('SELECT * FROM public.victima');
     return rta;
   }
 
