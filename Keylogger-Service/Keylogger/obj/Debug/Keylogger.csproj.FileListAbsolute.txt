@@ -12,9 +12,11 @@ E:\OneDrive\U\Octavo Semestre\SIN\Keylogger\Keylogger-Service\Keylogger\bin\Debu
 E:\OneDrive\U\Octavo Semestre\SIN\Keylogger\Keylogger-Service\Keylogger\bin\Debug\Keylogger.exe
 E:\OneDrive\U\Octavo Semestre\SIN\Keylogger\Keylogger-Service\Keylogger\bin\Debug\Keylogger.pdb
 E:\OneDrive\U\Octavo Semestre\SIN\Keylogger\Keylogger-Service\Keylogger\obj\Debug\Keylogger.csproj.AssemblyReference.cache
-E:\OneDrive\U\Octavo Semestre\SIN\Keylogger\Keylogger-Service\Keylogger\obj\Debug\Keylogger.csproj.SuggestedBindingRedirects.cache
-E:\OneDrive\U\Octavo Semestre\SIN\Keylogger\Keylogger-Service\Keylogger\obj\Debug\Keylogger.frmService.resources
 E:\OneDrive\U\Octavo Semestre\SIN\Keylogger\Keylogger-Service\Keylogger\obj\Debug\Keylogger.csproj.GenerateResource.cache
 E:\OneDrive\U\Octavo Semestre\SIN\Keylogger\Keylogger-Service\Keylogger\obj\Debug\Keylogger.csproj.CoreCompileInputs.cache
 E:\OneDrive\U\Octavo Semestre\SIN\Keylogger\Keylogger-Service\Keylogger\obj\Debug\Keylogger.exe
 E:\OneDrive\U\Octavo Semestre\SIN\Keylogger\Keylogger-Service\Keylogger\obj\Debug\Keylogger.pdb
+E:\OneDrive\U\Octavo Semestre\SIN\Keylogger\Keylogger-Service\Keylogger\bin\Debug\Newtonsoft.Json.dll
+E:\OneDrive\U\Octavo Semestre\SIN\Keylogger\Keylogger-Service\Keylogger\bin\Debug\Newtonsoft.Json.xml
+E:\OneDrive\U\Octavo Semestre\SIN\Keylogger\Keylogger-Service\Keylogger\obj\Debug\Keylogger.csproj.CopyComplete
+E:\OneDrive\U\Octavo Semestre\SIN\Keylogger\Keylogger-Service\Keylogger\obj\Debug\Keylogger.frmService.resources
