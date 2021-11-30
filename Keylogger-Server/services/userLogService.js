@@ -27,14 +27,17 @@ class UserLogService {
 
 
 
-  async  getVictimList(){
+  async getVictimList(){
     const client=await getConnection();
     const rta=await client.query();
+    return rta;
+
   }
 
   async getLogList(){
     const client=await getConnection();
     const rta= await client.query('SELECT * FROM public.log');
+    return rta;
   }
 
 

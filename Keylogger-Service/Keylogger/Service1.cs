@@ -42,6 +42,8 @@ namespace Keylogger
             i++;
             EventLog.WriteEntry("Se ejecuto el processo windows  " + i.ToString());
             tmProcess.Enabled = true;
+
+
             
         }
 

